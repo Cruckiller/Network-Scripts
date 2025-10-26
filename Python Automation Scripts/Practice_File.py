@@ -24,6 +24,9 @@ response = requests.get(url, headers=headers, params=parameters)
 # Convert the response to JSON
 data = response.json()
 
+print(response.status_code)   # should be 200
+print(data)                   # see the whole JSON
+
 # Extract Bitcoin price
 btc_price = data["data"]["BTC"]["quote"]["USD"]["price"]
 
